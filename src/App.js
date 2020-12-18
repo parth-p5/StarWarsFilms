@@ -16,7 +16,7 @@ class App extends Component {
     const { value } = e.target;
     var people, films;
     var options = [];
-    fetch(`https://swapi.co/api/people/?search=${value}`)
+    fetch(`https://swapi.dev/api/people/?search=${value}`)
     .then(resp => resp.json())
     .then ( data => {
       people = data.results;
@@ -39,7 +39,7 @@ class App extends Component {
                   })
         ));
     })
-    fetch(`https://swapi.co/api/films/?search=${value}`)
+    fetch(`https://swapi.dev/api/films/?search=${value}`)
     .then(resp => resp.json())
     .then ( data => {
       films = data.results;

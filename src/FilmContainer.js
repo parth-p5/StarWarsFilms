@@ -27,7 +27,7 @@ class FilmContainer extends Component {
     this.setState({ pauseButton: "none", playButton: "" });
   }
   search(title) {
-    fetch(`https://swapi.co/api/films/?search=${title}`)
+    fetch(`https://swapi.dev/api/films/?search=${title}`)
     .then(resp => resp.json())
     .then( data => {
       fetch(data.results[0].url)
